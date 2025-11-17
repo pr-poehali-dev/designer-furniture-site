@@ -92,40 +92,42 @@ export default function Services() {
               {
                 title: 'Кухни',
                 description: 'Функциональные кухонные гарнитуры с продуманной эргономикой',
-                icon: 'UtensilsCrossed'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/9b2aa658-e0f3-4039-a117-286ddb1e4ec9.jpg'
               },
               {
                 title: 'Гардеробные',
                 description: 'Системы хранения с оптимальным использованием пространства',
-                icon: 'Shirt'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/b8310a22-58ed-449d-8d10-f61cbae68dc0.jpg'
               },
               {
                 title: 'Гостиные',
                 description: 'Элегантная мебель для зон отдыха и приёма гостей',
-                icon: 'Sofa'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/b47737f2-ce80-4592-9666-520c4f80ca2c.jpg'
               },
               {
                 title: 'Спальни',
                 description: 'Комфортная мебель для создания уютной атмосферы',
-                icon: 'Bed'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/d825457a-a1f9-46eb-b0e7-38a8bca7e569.jpg'
               },
               {
                 title: 'Кабинеты',
                 description: 'Стильная мебель для рабочих пространств',
-                icon: 'Briefcase'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/1801d278-1397-48c7-b118-ff1fb96dacca.jpg'
               },
               {
                 title: 'Прихожие',
                 description: 'Компактные и вместительные решения для входных зон',
-                icon: 'DoorOpen'
+                image: 'https://cdn.poehali.dev/projects/69664c28-95a7-48d6-8a83-b02a4bf633a0/files/f412a04f-2d9b-49b2-94ed-e5191fb45401.jpg'
               }
             ].map((project, index) => (
-              <Card key={index} className="p-6 text-center hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-20 h-20 bg-[#E8DED3] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Icon name={project.icon as any} size={36} className="text-[#3D2817]" />
+              <Card key={index} className="overflow-hidden hover-scale animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="h-64 overflow-hidden">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-serif text-[#3D2817] mb-3">{project.title}</h3>
-                <p className="text-[#3D2817]/70">{project.description}</p>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-serif text-[#3D2817] mb-3">{project.title}</h3>
+                  <p className="text-[#3D2817]/70">{project.description}</p>
+                </div>
               </Card>
             ))}
           </div>
